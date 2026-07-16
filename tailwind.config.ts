@@ -6,12 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        // escala clara: tons de branco p/ diferenciar seções (lilac = tinta lilás)
-        canvas: { DEFAULT: "#F0F0F0", 2: "#E6E6E6", lilac: "#ECE9F7" },
+        // escala clara: tons de branco p/ diferenciar seções (lilac = lilás, blue = azulado)
+        canvas: { DEFAULT: "#F0F0F0", 2: "#E6E6E6", lilac: "#E6DFF7", blue: "#DFE9FA" },
         ink: { DEFAULT: "#1A1A1A", strong: "#0A0A0A" },
         "purple-black": "#180828",
         // escala escura: pretos com tintas diferentes (2 = roxeado, 3 = azulado)
-        night: { DEFAULT: "#0E0E13", 2: "#151022", 3: "#0D1119", card: "#17171F" },
+        night: { DEFAULT: "#0E0E13", 2: "#1B1230", 3: "#0F1726", card: "#17171F" },
         brand: {
           purple: "#5028E0",
           blue: "#215FFE",

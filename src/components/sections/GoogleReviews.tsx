@@ -73,7 +73,7 @@ export function GoogleReviews() {
   return (
     <section
       id="avaliacoes"
-      className="bg-gradient-to-b from-canvas-2 to-white dark:from-night-2 dark:to-night-3"
+      className="bg-gradient-to-b from-canvas-blue to-white dark:from-night-2 dark:to-night-3"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
         <Reveal className="flex flex-col items-center text-center">
