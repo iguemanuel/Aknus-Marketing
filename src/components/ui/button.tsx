@@ -10,7 +10,7 @@ const variantClasses: Record<Variant, string> = {
   whatsapp:
     "bg-gradient-whatsapp text-white shadow-cta-whatsapp hover:-translate-y-0.5 hover:shadow-cta-whatsapp-hover",
   "outline-light":
-    "border-2 border-ink/15 bg-white/60 text-ink-strong hover:-translate-y-0.5 hover:border-brand-purple hover:text-brand-purple",
+    "border-2 border-ink/15 bg-white/60 text-ink-strong hover:-translate-y-0.5 hover:border-brand-purple hover:text-brand-purple dark:border-white/20 dark:bg-white/5 dark:text-white dark:hover:border-brand-violet dark:hover:text-brand-violet-light",
   "outline-dark":
     "border-2 border-white/20 text-white hover:-translate-y-0.5 hover:border-brand-violet hover:text-brand-violet",
 };

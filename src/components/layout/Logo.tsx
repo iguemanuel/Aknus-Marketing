@@ -11,7 +11,9 @@ export function Logo({ inverse = false }: LogoProps) {
       <span
         className={cn(
           "flex h-9 w-9 items-center justify-center rounded-lg text-sm font-black",
-          inverse ? "bg-white text-ink-strong" : "bg-ink-strong text-white",
+          inverse
+            ? "bg-white text-ink-strong"
+            : "bg-ink-strong text-white dark:bg-white dark:text-ink-strong",
         )}
       >
         A<span className="text-brand-purple">K</span>
@@ -19,7 +21,7 @@ export function Logo({ inverse = false }: LogoProps) {
       <span
         className={cn(
           "text-xl font-black tracking-tight",
-          inverse ? "text-white" : "text-ink-strong",
+          inverse ? "text-white" : "text-ink-strong dark:text-white",
         )}
       >
         Aknus<span className="text-brand-purple">.</span>

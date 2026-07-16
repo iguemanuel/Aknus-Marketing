@@ -9,6 +9,15 @@
       content="Aknus Marketing — agência de marketing orientada a resultado. Tráfego pago, redes sociais, design, vídeo e estratégia para o seu negócio crescer."
     />
     <title>Aknus Marketing — Confiança não se cria. Se transmite.</title>
+    <script>
+      // Aplica o tema antes do primeiro paint (evita flash): escolha salva > preferência do sistema
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

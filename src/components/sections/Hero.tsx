@@ -15,22 +15,22 @@ const avatarStyles = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-canvas bg-dot-grid">
+    <section id="top" className="relative overflow-hidden bg-canvas bg-dot-grid dark:bg-night">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-glow-light" />
 
       <Reveal className="relative mx-auto flex max-w-6xl flex-col items-center px-5 py-20 text-center md:px-12 md:py-32">
-        <Badge className="border border-ink/10 bg-white text-ink/80 shadow-sm">
+        <Badge className="border border-ink/10 bg-white text-ink/80 shadow-sm dark:border-white/10 dark:bg-night-card dark:text-white/80">
           <span aria-hidden className="h-2 w-2 rounded-full bg-brand-purple animate-pulse-soft" />
           Agência de marketing orientada a resultado
         </Badge>
 
-        <h1 className="mt-7 max-w-3xl text-display-1 text-ink-strong">
+        <h1 className="mt-7 max-w-3xl text-display-1 text-ink-strong dark:text-white">
           Confiança não se cria.
           <br />
           <GradientText>Se transmite.</GradientText>
         </h1>
 
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65">
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65 dark:text-white/65">
           A Aknus une estratégia, criativo e dados para transformar a percepção da sua
           marca em crescimento real — clientes chegando todos os dias.
         </p>
@@ -56,14 +56,15 @@ export function Hero() {
             {avatarStyles.map((style, i) => (
               <span
                 key={i}
-                className={`grid h-10 w-10 place-items-center rounded-full text-xs font-bold text-white ring-[3px] ring-canvas ${style}`}
+                className={`grid h-10 w-10 place-items-center rounded-full text-xs font-bold text-white ring-[3px] ring-canvas dark:ring-night ${style}`}
               >
                 {i === avatarStyles.length - 1 ? "+" : String.fromCharCode(65 + i * 3)}
               </span>
             ))}
           </div>
-          <p className="text-sm font-semibold text-ink/60">
-            <span className="text-ink-strong">+40 marcas</span> que confiam na Aknus
+          <p className="text-sm font-semibold text-ink/60 dark:text-white/60">
+            <span className="text-ink-strong dark:text-white">+40 marcas</span> que confiam na
+            Aknus
           </p>
         </div>
       </Reveal>

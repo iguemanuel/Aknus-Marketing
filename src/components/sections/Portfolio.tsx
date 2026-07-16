@@ -5,15 +5,18 @@ import { portfolio } from "@/data/portfolio";
 
 export function Portfolio() {
   return (
-    <section id="cases" className="bg-canvas-2">
+    <section id="cases" className="bg-canvas-2 dark:bg-night">
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
         <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="max-w-md text-display-2 text-ink-strong">
+          <h2 className="max-w-md text-display-2 text-ink-strong dark:text-white">
             Trabalho que <GradientText>fala por si.</GradientText>
           </h2>
-          <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-ink/50">
+          <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-ink/65 dark:text-white/50">
             arraste pro lado
-            <MoveRight aria-hidden className="h-4 w-4 animate-slide-x text-brand-purple" />
+            <MoveRight
+              aria-hidden
+              className="h-4 w-4 animate-slide-x text-brand-purple dark:text-brand-violet-light"
+            />
           </p>
         </Reveal>
 
@@ -27,7 +30,7 @@ export function Portfolio() {
             {portfolio.map((item, i) => (
               <article
                 key={item.title}
-                className="w-[330px] shrink-0 snap-start rounded-3xl bg-white p-4 shadow-card transition-transform duration-300 hover:-translate-y-1"
+                className="w-[330px] shrink-0 snap-start rounded-3xl bg-white p-4 shadow-card transition-transform duration-300 hover:-translate-y-1 dark:bg-night-card"
               >
                 {item.image ? (
                   <img
@@ -49,13 +52,13 @@ export function Portfolio() {
                 )}
 
                 <div className="px-2 pb-2 pt-5">
-                  <span className="inline-flex rounded-full bg-brand-purple/10 px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-brand-purple">
+                  <span className="inline-flex rounded-full bg-brand-purple/10 px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-brand-purple dark:bg-brand-violet/15 dark:text-brand-violet-light">
                     {item.tag}
                   </span>
-                  <h3 className="mt-3 text-lg font-extrabold tracking-tight text-ink-strong">
+                  <h3 className="mt-3 text-lg font-extrabold tracking-tight text-ink-strong dark:text-white">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-sm text-ink/60">{item.result}</p>
+                  <p className="mt-1 text-sm text-ink/60 dark:text-white/60">{item.result}</p>
                 </div>
               </article>
             ))}

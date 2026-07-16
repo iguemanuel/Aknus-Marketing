@@ -18,22 +18,25 @@ const aknusPath = [
 
 export function PathComparison() {
   return (
-    <section className="bg-canvas bg-dot-grid">
+    <section className="bg-canvas bg-dot-grid dark:bg-night">
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
         <Reveal>
-          <h2 className="mx-auto max-w-2xl text-center text-display-2 text-ink-strong">
+          <h2 className="mx-auto max-w-2xl text-center text-display-2 text-ink-strong dark:text-white">
             Todo negócio chega nesta <GradientText>placa de sinalização.</GradientText>
           </h2>
         </Reveal>
 
         <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
           <Reveal>
-            <div className="h-full rounded-3xl border-2 border-dashed border-ink/20 bg-white/50 p-8">
-              <h3 className="text-xl font-bold text-ink/55">Caminho comum</h3>
+            <div className="h-full rounded-3xl border-2 border-dashed border-ink/20 bg-white/50 p-8 dark:border-white/15 dark:bg-white/5">
+              <h3 className="text-xl font-bold text-ink/65 dark:text-white/55">Caminho comum</h3>
               <ul className="mt-6 space-y-4">
                 {commonPath.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-ink/55">
-                    <X aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-ink/35" />
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-ink/65 dark:text-white/55"
+                  >
+                    <X aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-ink/35 dark:text-white/35" />
                     {item}
                   </li>
                 ))}

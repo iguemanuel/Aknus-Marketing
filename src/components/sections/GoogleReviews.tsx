@@ -26,7 +26,9 @@ function Stars({ rating }: { rating: number }) {
           key={i}
           aria-hidden
           className={`h-4 w-4 ${
-            i < rating ? "fill-brand-purple text-brand-purple" : "text-ink/20"
+            i < rating
+              ? "fill-brand-purple text-brand-purple dark:fill-brand-violet dark:text-brand-violet-light"
+              : "text-ink/20 dark:text-white/20"
           }`}
         />
       ))}
@@ -69,20 +71,24 @@ export function GoogleReviews() {
   const visible = reviews.slice(page * perPage, page * perPage + perPage);
 
   return (
-    <section id="avaliacoes" className="bg-canvas">
+    <section id="avaliacoes" className="bg-canvas dark:bg-night">
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
         <Reveal className="flex flex-col items-center text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple dark:text-brand-violet-light">
             {"// Avaliações no Google"}
           </p>
-          <h2 className="mt-4 text-display-2 text-ink-strong">
+          <h2 className="mt-4 text-display-2 text-ink-strong dark:text-white">
             Quem contrata, <GradientText>recomenda.</GradientText>
           </h2>
           <div className="mt-6 flex items-center gap-3">
-            <p className="text-4xl font-black text-ink-strong">{rating.toFixed(1)}</p>
+            <p className="text-4xl font-black text-ink-strong dark:text-white">
+              {rating.toFixed(1)}
+            </p>
             <div className="text-left">
               <Stars rating={Math.round(rating)} />
-              <p className="mt-1 text-sm text-ink/55">{total} avaliações no Google</p>
+              <p className="mt-1 text-sm text-ink/65 dark:text-white/55">
+                {total} avaliações no Google
+              </p>
             </div>
           </div>
         </Reveal>
@@ -111,13 +117,13 @@ export function GoogleReviews() {
                   {visible.map((review) => (
                     <article
                       key={review.name}
-                      className="flex flex-col items-center rounded-3xl bg-white p-7 text-center shadow-card"
+                      className="flex flex-col items-center rounded-3xl bg-white p-7 text-center shadow-card dark:bg-night-card"
                     >
                       <Stars rating={review.rating} />
-                      <p className="mt-4 text-sm leading-relaxed text-ink/70">
+                      <p className="mt-4 text-sm leading-relaxed text-ink/70 dark:text-white/70">
                         “{review.text}”
                       </p>
-                      <p className="mt-auto pt-5 text-sm font-bold text-ink-strong">
+                      <p className="mt-auto pt-5 text-sm font-bold text-ink-strong dark:text-white">
                         {review.name}
                       </p>
                     </article>
@@ -136,7 +142,9 @@ export function GoogleReviews() {
                   onClick={() => setPage(i)}
                   className={cn(
                     "h-2.5 rounded-full transition-all duration-300",
-                    i === page ? "w-7 bg-gradient-primary" : "w-2.5 bg-ink/20 hover:bg-ink/35",
+                    i === page
+                      ? "w-7 bg-gradient-primary"
+                      : "w-2.5 bg-ink/20 hover:bg-ink/35 dark:bg-white/20 dark:hover:bg-white/35",
                   )}
                 />
               ))}

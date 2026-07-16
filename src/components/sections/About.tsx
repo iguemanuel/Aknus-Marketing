@@ -16,7 +16,7 @@ const partners = [
 
 export function About() {
   return (
-    <section id="sobre" className="bg-white">
+    <section id="sobre" className="bg-white dark:bg-night">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:px-12 md:py-32">
         <Reveal>
           <div className="grid grid-cols-2 gap-5">
@@ -27,7 +27,7 @@ export function About() {
                   alt={`${partner.name}, ${partner.role} da Aknus Marketing`}
                   className="aspect-[3/4] w-full rounded-3xl object-cover shadow-card"
                 />
-                <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink/40">
+                <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink/60 dark:text-white/55">
                   {`// ${partner.name} — ${partner.role}`}
                 </p>
               </div>
@@ -36,13 +36,13 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple dark:text-brand-violet-light">
             {"// Sobre a Aknus"}
           </p>
-          <h2 className="mt-4 text-display-2 text-ink-strong">
+          <h2 className="mt-4 text-display-2 text-ink-strong dark:text-white">
             Gente obcecada por <GradientText>resultado.</GradientText>
           </h2>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-ink/65">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-ink/65 dark:text-white/65">
             A Aknus nasceu para tirar marcas do piloto automático. Somos um time que trata
             o marketing de cada cliente como negócio próprio: cada real investido precisa
             voltar em crescimento. Sem métrica de vaidade, sem promessa vazia — estratégia,
@@ -52,8 +52,10 @@ export function About() {
           <div className="mt-10 grid grid-cols-3 gap-6">
             {numbers.map((item) => (
               <div key={item.label}>
-                <p className="text-4xl font-black tracking-tight text-ink-strong">{item.value}</p>
-                <p className="mt-1 text-sm text-ink/55">{item.label}</p>
+                <p className="text-4xl font-black tracking-tight text-ink-strong dark:text-white">
+                  {item.value}
+                </p>
+                <p className="mt-1 text-sm text-ink/65 dark:text-white/55">{item.label}</p>
               </div>
             ))}
           </div>

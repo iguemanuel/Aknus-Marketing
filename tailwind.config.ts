@@ -2,16 +2,20 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         canvas: { DEFAULT: "#F0F0F0", 2: "#E6E6E6" },
         ink: { DEFAULT: "#1A1A1A", strong: "#0A0A0A" },
         "purple-black": "#180828",
+        night: { DEFAULT: "#0E0E13", card: "#17171F" },
         brand: {
           purple: "#5028E0",
           blue: "#215FFE",
           violet: "#8058F8",
+          // variante clara do violeta p/ texto pequeno em fundo escuro (contraste WCAG AA)
+          "violet-light": "#A78BFA",
         },
         whatsapp: "#25D366",
       },

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Logo } from "@/components/layout/Logo";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { siteConfig, waLink } from "@/data/site-config";
 import { cn } from "@/lib/utils";
 
@@ -56,8 +57,8 @@ export function Navbar() {
       className={cn(
         "sticky top-0 z-50 border-b backdrop-blur-md transition-all duration-300",
         scrolled
-          ? "border-ink/10 bg-canvas/90 shadow-[0_8px_30px_rgba(24,8,40,0.08)]"
-          : "border-transparent bg-canvas/80",
+          ? "border-ink/10 bg-canvas/90 shadow-[0_8px_30px_rgba(24,8,40,0.08)] dark:border-white/10 dark:bg-night/90"
+          : "border-transparent bg-canvas/80 dark:bg-night/80",
       )}
     >
       <nav
@@ -75,10 +76,10 @@ export function Navbar() {
                 className={cn(
                   "relative py-1 text-sm font-semibold transition-colors duration-200",
                   "after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-primary after:transition-transform after:duration-300",
-                  "hover:text-brand-purple hover:after:scale-x-100",
+                  "hover:text-brand-purple hover:after:scale-x-100 dark:hover:text-brand-violet-light",
                   active === link.href.slice(1)
-                    ? "text-brand-purple after:scale-x-100"
-                    : "text-ink/70",
+                    ? "text-brand-purple after:scale-x-100 dark:text-brand-violet-light"
+                    : "text-ink/70 dark:text-white/70",
                 )}
               >
                 {link.label}
@@ -88,6 +89,7 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <a
             href={waLink}
             target="_blank"
@@ -99,7 +101,7 @@ export function Navbar() {
           </a>
           <button
             type="button"
-            className="grid h-10 w-10 place-items-center rounded-lg text-ink-strong transition-colors hover:bg-ink/5 md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-lg text-ink-strong transition-colors hover:bg-ink/5 dark:text-white dark:hover:bg-white/10 md:hidden"
             aria-expanded={open}
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             onClick={() => setOpen((v) => !v)}
@@ -116,7 +118,7 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="overflow-hidden border-t border-ink/10 bg-canvas md:hidden"
+            className="overflow-hidden border-t border-ink/10 bg-canvas dark:border-white/10 dark:bg-night md:hidden"
           >
             <div className="px-5 pb-6 pt-4">
               <ul className="flex flex-col gap-1">
@@ -127,8 +129,8 @@ export function Navbar() {
                       className={cn(
                         "block rounded-xl px-3 py-2.5 text-base font-semibold transition-colors",
                         active === link.href.slice(1)
-                          ? "bg-brand-purple/10 text-brand-purple"
-                          : "text-ink/80 hover:bg-ink/5",
+                          ? "bg-brand-purple/10 text-brand-purple dark:bg-brand-violet/15 dark:text-brand-violet-light"
+                          : "text-ink/80 hover:bg-ink/5 dark:text-white/80 dark:hover:bg-white/10",
                       )}
                       onClick={() => setOpen(false)}
                     >
