@@ -15,7 +15,11 @@ const avatarStyles = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-canvas bg-dot-grid dark:bg-night">
+    <section
+      id="top"
+      className="relative overflow-hidden bg-gradient-to-b from-canvas to-white dark:from-night dark:to-night-2"
+    >
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-dot-grid" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-glow-light" />
 
       <Reveal className="relative mx-auto flex max-w-6xl flex-col items-center px-5 py-20 text-center md:px-12 md:py-32">
@@ -56,7 +60,7 @@ export function Hero() {
             {avatarStyles.map((style, i) => (
               <span
                 key={i}
-                className={`grid h-10 w-10 place-items-center rounded-full text-xs font-bold text-white ring-[3px] ring-canvas dark:ring-night ${style}`}
+                className={`grid h-10 w-10 place-items-center rounded-full text-xs font-bold text-white ring-[3px] ring-white dark:ring-night-2 ${style}`}
               >
                 {i === avatarStyles.length - 1 ? "+" : String.fromCharCode(65 + i * 3)}
               </span>

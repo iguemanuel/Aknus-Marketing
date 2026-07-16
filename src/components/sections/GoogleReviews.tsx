@@ -71,7 +71,10 @@ export function GoogleReviews() {
   const visible = reviews.slice(page * perPage, page * perPage + perPage);
 
   return (
-    <section id="avaliacoes" className="bg-canvas dark:bg-night">
+    <section
+      id="avaliacoes"
+      className="bg-gradient-to-b from-canvas-2 to-white dark:from-night-2 dark:to-night-3"
+    >
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
         <Reveal className="flex flex-col items-center text-center">
           <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple dark:text-brand-violet-light">

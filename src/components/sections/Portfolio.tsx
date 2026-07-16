@@ -5,7 +5,10 @@ import { portfolio } from "@/data/portfolio";
 
 export function Portfolio() {
   return (
-    <section id="cases" className="bg-canvas-2 dark:bg-night">
+    <section
+      id="cases"
+      className="bg-gradient-to-b from-canvas-lilac to-canvas-2 dark:from-night dark:to-night-2"
+    >
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
         <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="max-w-md text-display-2 text-ink-strong dark:text-white">

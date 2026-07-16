@@ -18,7 +18,10 @@ export function SocialProofCase() {
   const { ref, value } = useAnimatedCounter(160, 483);
 
   return (
-    <section id="case" className="bg-canvas-2 dark:bg-night">
+    <section
+      id="case"
+      className="bg-gradient-to-b from-white to-canvas-2 dark:from-night-2 dark:to-night-3"
+    >
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:px-12 md:py-32">
         <Reveal>
           <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple dark:text-brand-violet-light">
