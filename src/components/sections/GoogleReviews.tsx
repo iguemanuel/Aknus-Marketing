@@ -73,9 +73,9 @@ export function GoogleReviews() {
   return (
     <section
       id="avaliacoes"
-      className="bg-gradient-to-b from-canvas-blue to-white dark:from-night-2 dark:to-night-3"
+      className="flex min-h-svh flex-col justify-center bg-gradient-to-b from-canvas-blue to-white snap-start dark:from-night-2 dark:to-night-3"
     >
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
+      <div className="mx-auto w-full max-w-6xl px-5 py-24 md:px-12">
         <Reveal className="flex flex-col items-center text-center">
           <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-purple dark:text-brand-violet-light">
             {"// Avaliações no Google"}

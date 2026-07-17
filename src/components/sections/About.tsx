@@ -18,9 +18,9 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="bg-gradient-to-b from-white to-canvas dark:from-night-3 dark:to-night"
+      className="flex min-h-svh flex-col justify-center bg-gradient-to-b from-white to-canvas snap-start dark:from-night-3 dark:to-night"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:px-12 md:py-32">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 md:grid-cols-2 md:px-12">
         <Reveal>
           <div className="grid grid-cols-2 gap-5">
             {partners.map((partner) => (

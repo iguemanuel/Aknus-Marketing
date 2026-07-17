@@ -5,8 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* offset das âncoras para não esconder conteúdo atrás da navbar sticky */
-    scroll-padding-top: 88px;
+    /* seções fullscreen: o scroll "gruda" no topo de cada uma (proximity não
+       trava seções mais altas que a viewport, ex. mobile) */
+    scroll-snap-type: y proximity;
   }
 
   body {

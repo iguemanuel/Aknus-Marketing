@@ -17,12 +17,12 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-b from-canvas to-white dark:from-night dark:to-night-2"
+      className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-gradient-to-b from-canvas to-white snap-start dark:from-night dark:to-night-2"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-dot-grid" />
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-glow-light" />
 
-      <Reveal className="relative mx-auto flex max-w-6xl flex-col items-center px-5 py-20 text-center md:px-12 md:py-32">
+      <Reveal className="relative mx-auto flex max-w-6xl flex-col items-center px-5 py-24 text-center md:px-12">
         <Badge className="border border-ink/10 bg-white text-ink/80 shadow-sm dark:border-white/10 dark:bg-night-card dark:text-white/80">
           <span aria-hidden className="h-2 w-2 rounded-full bg-brand-purple animate-pulse-soft" />
           Agência de marketing orientada a resultado

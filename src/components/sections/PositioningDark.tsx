@@ -6,10 +6,10 @@ const tags = ["Estratégia antes da mídia", "Criativo que converte", "Dados, n�
 
 export function PositioningDark() {
   return (
-    <section className="relative overflow-hidden bg-gradient-night">
+    <section className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-gradient-night snap-start">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-glow-dark" />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:px-12 md:py-32">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 md:grid-cols-2 md:px-12">
         <Reveal>
           <h2 className="text-display-2 text-white">
             Não jogue o mesmo jogo.

@@ -18,9 +18,9 @@ const aknusPath = [
 
 export function PathComparison() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-canvas to-canvas-lilac dark:from-purple-black dark:to-night">
+    <section className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-gradient-to-b from-canvas to-canvas-lilac snap-start dark:from-purple-black dark:to-night">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-dot-grid" />
-      <div className="relative mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
+      <div className="relative mx-auto w-full max-w-6xl px-5 py-24 md:px-12">
         <Reveal>
           <h2 className="mx-auto max-w-2xl text-center text-display-2 text-ink-strong dark:text-white">
             Todo negócio chega nesta <GradientText>placa de sinalização.</GradientText>

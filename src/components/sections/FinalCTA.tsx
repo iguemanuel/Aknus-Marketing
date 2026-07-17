@@ -7,10 +7,10 @@ import { igLink, siteConfig, waLink } from "@/data/site-config";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-gradient-night">
+    <section className="relative flex min-h-svh flex-col justify-center overflow-hidden bg-gradient-night snap-start">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-glow-dark" />
 
-      <Reveal className="relative mx-auto flex max-w-6xl flex-col items-center px-5 py-20 text-center md:px-12 md:py-32">
+      <Reveal className="relative mx-auto flex max-w-6xl flex-col items-center px-5 py-24 text-center md:px-12">
         <h2 className="max-w-2xl text-display-2 text-white">
           Seu negócio pode ser o <GradientText dark>próximo case.</GradientText>
         </h2>

@@ -7,8 +7,11 @@ import { waLink } from "@/data/site-config";
 
 export function Services() {
   return (
-    <section id="servicos" className="bg-purple-black">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-12 md:py-32">
+    <section
+      id="servicos"
+      className="flex min-h-svh flex-col justify-center bg-purple-black snap-start"
+    >
+      <div className="mx-auto w-full max-w-6xl px-5 py-24 md:px-12">
         <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-violet-light">
